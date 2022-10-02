@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-09-26 22:45:17.787063",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "max_locker",
+  "max_booking",
+  "year_start_date",
+  "year_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "max_locker",
+   "fieldtype": "Int",
+   "label": "Max Locker"
+  },
+  {
+   "fieldname": "max_booking",
+   "fieldtype": "Int",
+   "label": "Max Booking"
+  },
+  {
+   "fieldname": "year_start_date",
+   "fieldtype": "Date",
+   "label": "Year Start Date"
+  },
+  {
+   "fieldname": "year_end_date",
+   "fieldtype": "Date",
+   "label": "Year End Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-09-28 15:25:53.416539",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

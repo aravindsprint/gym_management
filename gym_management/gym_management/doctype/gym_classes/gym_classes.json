@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-09-27 11:55:54.271873",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_class",
+  "gym_time",
+  "gym_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Class",
+   "options": "Gym Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gym_time",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Time",
+   "options": "Gym Time",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "gym_qty",
+   "fieldtype": "Int",
+   "label": "Gym Class Qty"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-09-28 13:11:52.379137",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Classes",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

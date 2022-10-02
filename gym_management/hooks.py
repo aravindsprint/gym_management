@@ -113,23 +113,28 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"gym_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"gym_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"gym_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"gym_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"gym_management.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "cron": {
+        "* * * * *": [
+			"gym_management.tasks.cron"
+		]
+    },
+	"all": [
+		"gym_management.tasks.all"
+	],
+	"daily": [
+		"gym_management.tasks.daily"
+	],
+	"hourly": [
+		"gym_management.tasks.hourly"
+	],
+	"weekly": [
+		"gym_management.tasks.weekly"
+	],
+	"monthly": [
+		"gym_management.tasks.monthly"
+	],
+}
 
 # Testing
 # -------
