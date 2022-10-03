@@ -4,7 +4,7 @@ import frappe
 def execute():
 	frappe.reload_doc("gym_management", "doctype", "gym_member")
 
-	gym_member = frappe.qb.DocType("gym_member")
+	gym_member = frappe.qb.DocType("Gym Member")
 
 	(
 		frappe.qb.update(gym_member)
