@@ -1,4 +1,4 @@
 [pre_model_sync]
-gym_management.pre_install.patches.v1_0.enable_gym_member
+gym_management.patches.pre_install.patches.v1_0.enable_gym_member
 [post_model_sync]
-gym_management.post_install.patches.v1_0.add_cost_center_in_gym_membership
+gym_management.patches.post_install.patches.v1_0.add_cost_center_in_gym_membership
