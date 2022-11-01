@@ -53,5 +53,8 @@ class GymLockerBooking(Document):
             "to_date": (">=", self.date),
             },
         )
+        print("valid_membership", valid_membership)
         if not valid_membership:
-            frappe.throw("The member does not have a valid membership")        
+            frappe.throw("The member does not have a valid membership")
+        else:
+            return           

@@ -15,22 +15,25 @@ from frappe.modules.utils import export_module_json, get_doc_module
 from frappe.utils import add_to_date, cast, is_html, nowdate, validate_email_address
 from frappe.utils.jinja import validate_template
 from frappe.utils.safe_exec import get_safe_globals
-
+from frappe.utils.background_jobs import enqueue
+from frappe import enqueue
 
 
 
 def daily():
     print("\n\n\n Send Email\n\n\n")
     current_day = date.today().strftime("%A")
-    if(current_day == "Sunday"):
+    if(current_day != "Sunday"):
         today_date = DT.date.today()
-        week_ago_date = today_date - DT.timedelta(days=7)
+        week_ago_date = today_date - DT.timedelta(days=30)
+        print("week_ago_date",week_ago_date)
         emailIds = frappe.db.sql("""
         select  s.gym_member as gym_member, s.email as email 
         from  `tabGym Class Booking` s 
         where  s.docstatus = 1 and 
         s.date >= '{0}' group by s.email order by s.date asc
-        """.format("2022-09-28"), as_dict=True)
+        """.format(week_ago_date), as_dict=True)
+        print("emailIds",emailIds)
         for x in emailIds:
             print(x)
             for key, value in x.items():
@@ -38,6 +41,7 @@ def daily():
                     search_gym_member = value
                 if(key == "email"):
                     recipients = value
+                    print("recipients",recipients)
                     emailSubject = "Last Week Class Attended Summary in Our Tirupur Muscle Factory"
                     sender = "aravindsprint@gmail.com"
                     content = "<h4>Hello, Customer </h4><p>Last Week Class Attened Summary. Please make a note for that.</p><table class='table table-bordered'><tr><th>Date</th><th>Class Name</th><th>Time</th></tr>"
@@ -57,15 +61,22 @@ def daily():
                                 gymtime = value
                                 content = content + "<tr><td>"+gymdate+"</td><td>"+gymclass+"</td><td>"+gymtime+"</td></tr>"  
                     content = content + "</table>"
+                    print("\n\n\n Outside send_email \n\n\n")
                     frappe.sendmail(
                     recipients=recipients,
                     subject=emailSubject,
                     sender=sender,
                     message=content
                     )
+                    print("\n\n\n Outside send_email \n\n\n")
+
                    
     else:
-        print("Not Sunday")
+        # print("Not Sunday")
+        print("Sunday")
+
+
+   
 
 
 

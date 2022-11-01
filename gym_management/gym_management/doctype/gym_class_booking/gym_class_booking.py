@@ -4,6 +4,8 @@
 import frappe
 from frappe.model.document import Document
 from frappe.model.docstatus import DocStatus
+from frappe.utils.background_jobs import enqueue
+from frappe import enqueue
 
 class GymClassBooking(Document):
     def before_save(self):
@@ -54,5 +56,11 @@ class GymClassBooking(Document):
             },
         )
         if not valid_membership:
-            frappe.throw("The member does not have a valid membership")    
+            frappe.throw("The member does not have a valid membership")
+
+          
+
+    @frappe.whitelist()
+    def test(self):
+        return self.name            
     

@@ -48,7 +48,8 @@
    "fieldname": "gym_membership",
    "fieldtype": "Link",
    "label": "Gym Membership",
-   "options": "Gym Membership"
+   "options": "Gym Membership",
+   "reqd": 1
   },
   {
    "fieldname": "locker_book",
@@ -59,7 +60,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-01 11:47:31.365903",
+ "modified": "2022-10-31 17:47:55.261195",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Locker Booking",

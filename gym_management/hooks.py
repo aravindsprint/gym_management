@@ -11,8 +11,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/gym_management/css/gym_management.css"
-# app_include_js = "/assets/gym_management/js/gym_management.js"
+app_include_css = "gym_management.bundle.css"
+# app_include_js = "gym_management.bundle.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/gym_management/css/gym_management.css"
@@ -94,46 +94,50 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	# "ToDo": "custom_app.overrides.CustomToDo",
+	"Gym Member": "gym_management.overrides.UpdateGymMember"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }, 
+	"Gym Class Booking": {
+	    "on_submit": "gym_management.gym_management.doctype.gym_class_booking.events.validate_test"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
 
 scheduler_events = {
-    "cron": {
-        "* * * * *": [
-			"gym_management.tasks.cron"
-		]
-    },
-	"all": [
-		"gym_management.tasks.all"
-	],
+    #"cron": {
+    #    "* * * * *": [
+	#		"gym_management.tasks.cron"
+	#	]
+    #},
+	# "all": [
+	# 	"gym_management.tasks.all"
+	# ],
 	"daily": [
 		"gym_management.tasks.daily"
 	],
-	"hourly": [
-		"gym_management.tasks.hourly"
-	],
-	"weekly": [
-		"gym_management.tasks.weekly"
-	],
-	"monthly": [
-		"gym_management.tasks.monthly"
-	],
+	# "hourly": [
+	# 	"gym_management.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"gym_management.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"gym_management.tasks.monthly"
+	# ],
 }
 
 # Testing
@@ -198,3 +202,7 @@ scheduler_events = {
 # Recommended only for DocTypes which have limited documents with untranslated names
 # For example: Role, Gender, etc.
 # translated_search_doctypes = []
+ 
+fixtures = [
+    "Gym Member"
+] 

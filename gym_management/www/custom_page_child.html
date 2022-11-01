@@ -1,0 +1,8 @@
+
+
+{% include 'www/custom_base.html' ignore missing %}
+
+
+{% for user in users -%}
+    <li>{{ user.first_name|e }} {{ user.get("last_name", "") }}</li>
+{% endfor %}

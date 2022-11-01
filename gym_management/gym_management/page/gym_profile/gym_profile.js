@@ -6,8 +6,14 @@ frappe.pages['gym-profile'].on_page_load = function(wrapper) {
 		title: 'Gym Profile',
 		single_column: true
 	});
-	//page.body.append('hello');
+	// page.body.append('hello');
 	
+	
+
+	frappe.require(['gym_management.bundle.js'], () =>{
+		console.log("Gym Management Bundle Loaded");
+	});
+
 	frappe.gym_profile.make(page);
 	frappe.gym_profile.run();
 

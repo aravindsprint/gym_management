@@ -1,0 +1,28 @@
+<!-- about.html -->
+<!-- {%  extends "templates/web.html" %}
+
+{% block title %}{{ _("About Us") }}{% endblock %}
+ -->
+ <!-- add-breadcrumbs -->
+{%- if add_breadcrumbs -%}
+    {% include "frappe/templates/includes/breadcrumbs.html" %}
+{%- endif -%}
+
+ <!-- show-sidebar -->
+{% block page_content %}
+
+<h1>{{ _("About Us") }}</h1>
+<div class="row">
+    <div class="col-sm-6">
+       {{about_us_settings.company_introduction}}
+    </div>
+    Author By: {{name}}
+</div>
+    {% if about_us_settings %}
+    <a href="/contact" class="btn btn-primary">Contact Us</a>
+    {% endif %}
+
+    {{ include_script('gym_management.bundle.js') }}
+
+{% endblock %}
+

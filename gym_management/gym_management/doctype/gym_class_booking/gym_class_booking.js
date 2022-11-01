@@ -25,5 +25,17 @@ frappe.ui.form.on('Gym Class Booking',  {
           frappe.throw("Please select the current date");
           frappe.validated = false;
         }
-    } 
+    }, 
+    refresh: function (frm) {
+        // body...
+        console.log("frm",frm);
+        frm.call('test').then(r => {
+        if (r.message) {
+            let linked_doc = r.message;
+            console.log("linked_doc",linked_doc);
+            // do something with linked_doc
+        }
+        })
+
+    }
 })
