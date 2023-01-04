@@ -6,9 +6,12 @@ def get_context(context):
     print("context.about_us_settings",context.about_us_settings)
     # read query_params in the browser url
     query_params = frappe.utils.get_url()
-    print("query_params",query_params);
-    context.name = "Aravind"
-    context.add_breadcrumbs = 1
+    # form = frappe.form_dict
+    # to ready the query params in the URL
+    print("frappe",frappe.form_dict)
+    print("query_params",query_params)
+    # context.name = "Aravind"
+    #context.add_breadcrumbs = 1
     context.show_sidebar = 1
     print("\n\n\n context \n\n\n",context)
     return context

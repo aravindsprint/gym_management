@@ -9,6 +9,7 @@
  "field_order": [
   "gym_member",
   "full_name",
+  "email_id",
   "date",
   "gym_membership",
   "locker_book",
@@ -55,12 +56,17 @@
    "fieldname": "locker_book",
    "fieldtype": "Int",
    "label": "No of Locker"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-31 17:47:55.261195",
+ "modified": "2023-01-04 10:54:02.744524",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Locker Booking",

@@ -2,9 +2,9 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Gym Member', {
-	validate: function(frm) {
+	onload: function(frm) {
     console.log("frm",frm);
-    frappe.realtime.on("Saved", ({ data }) => {
+    frappe.realtime.on("event_name", ({ data }) => {
             console.log("real time data",data);
         });
 	},

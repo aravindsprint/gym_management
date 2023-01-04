@@ -1,6 +1,6 @@
 [
  {
-  "city": null,
+  "city": "Tiruppur",
   "docstatus": 0,
   "doctype": "Gym Member",
   "email": "tamilarasu@gmail.com",
@@ -8,12 +8,12 @@
   "first_name": "Tamil",
   "full_name": "Tamil Arasu S",
   "last_name": "Arasu S",
-  "modified": "2022-10-19 11:27:17.077415",
+  "modified": "2022-11-01 15:55:02.219636",
   "name": "Tamil",
   "phone": "+91-9999955555"
  },
  {
-  "city": null,
+  "city": "",
   "docstatus": 0,
   "doctype": "Gym Member",
   "email": "starruthish@gmail.com",
@@ -21,12 +21,38 @@
   "first_name": "Ruthish",
   "full_name": "Ruthish Kumar",
   "last_name": "Kumar",
-  "modified": "2022-09-28 17:17:00.686788",
+  "modified": "2022-10-20 18:43:32.586674",
   "name": "Ruthish",
-  "phone": "+91-9025987859"
+  "phone": "+91-9025987858"
+ },
+ {
+  "city": "Kovai",
+  "docstatus": 0,
+  "doctype": "Gym Member",
+  "email": "dinesh@gmail.com",
+  "enabled": 1,
+  "first_name": "Dinesh",
+  "full_name": "Dinesh Kumar",
+  "last_name": "Kumar",
+  "modified": "2022-10-20 18:47:24.342102",
+  "name": "Dinesh",
+  "phone": "+91-8888899999"
  },
  {
   "city": null,
+  "docstatus": 0,
+  "doctype": "Gym Member",
+  "email": null,
+  "enabled": 1,
+  "first_name": "_Test Gym Member",
+  "full_name": "_Test Gym Member _Test Last Name",
+  "last_name": "_Test Last Name",
+  "modified": "2022-10-31 17:42:14.808422",
+  "name": "_Test Gym Member",
+  "phone": null
+ },
+ {
+  "city": "Tirupur",
   "docstatus": 0,
   "doctype": "Gym Member",
   "email": "aravindsprint@gmail.com",
@@ -34,7 +60,7 @@
   "first_name": "Aravind",
   "full_name": "Aravind Govindaraj",
   "last_name": "Govindaraj",
-  "modified": "2022-09-27 22:01:04.152709",
+  "modified": "2022-10-29 09:09:49.711633",
   "name": "Aravind",
   "phone": "+91-9894088422"
  }

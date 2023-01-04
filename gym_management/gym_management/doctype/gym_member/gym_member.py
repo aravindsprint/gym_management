@@ -12,7 +12,7 @@ class GymMember(Document):
 		print("self",self.first_name)
 		print("self",self.last_name)
 		self.full_name = f'{self.first_name} {self.last_name or ""}'
-		#frappe.publish_realtime("Saved")
+		frappe.publish_realtime("Saved")
 
 	def before_validate(self):
 		print("self before_validate",self)   
@@ -23,7 +23,7 @@ class GymMember(Document):
 		frappe.publish_realtime("Saved", {"data": self})
 		frappe.enqueue(self.send_email, doc=self, queue='short', now=True, is_async=True,  timeout=300, )
 		print("\n\n\n After enqueue \n\n\n")
-		# frappe.publish_realtime('event_name', data={'key': 'value'})
+		frappe.publish_realtime('event_name', data={'key': 'value'})
 
 
 	def send_email(doc):

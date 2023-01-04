@@ -110,7 +110,7 @@ doc_events = {
 	# 	"on_trash": "method"
 	# }, 
 	"Gym Class Booking": {
-	    "on_submit": "gym_management.gym_management.doctype.gym_class_booking.events.validate_test"
+	    "on_submit": "gym_management.gym_management.doctype.gym_class_booking.events.on_submit"
 	}
 }
 
